@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping schema="skillManagementSystem" package="it.synclab.sms.persistent">
+
+	<class name="Persona" table="Persona" lazy="false">
+		<id name="id_protocollo" />
+		<property name="nome" />
+		<property name="cognome" />
+		<property name="paese" />
+		<property name="indirizzo" />
+		<property name="data_nascita"/>
+		<property name="telefono" />
+		<property name="email" />
+		<property name="notePersona" />
+		<property name="status_lavorativo" />
+		<property name="profilo" />
+		<property name="da_considerare" />
+	</class>
+
+</hibernate-mapping>

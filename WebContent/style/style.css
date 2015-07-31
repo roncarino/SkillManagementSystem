@@ -1,0 +1,187 @@
+body {
+	background-image: url("/SkillManagementSystem/image/backgroundSMS1.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+
+#tornaHome {
+	float:right;
+  	margin-right:40px;
+}
+
+/* FORM DELLE VARIE PAGINE JSP */
+#formRicerca {
+	border:1px dotted;
+  	float:none;
+  	margin:40px auto 60px;
+  	text-align:left;
+  	width:465px;
+}
+
+#formTrovaId {
+	border:1px dotted;
+  	float:none;
+  	margin:40px auto 60px;
+  	text-align:left;
+  	width:235px;
+}
+
+#formDati {
+  	float:none;
+  	margin:40px auto 60px;
+  	text-align:left;
+  	width:320px;
+}
+
+#formUpload {
+  	float:none;
+  	margin:60px auto 75px;
+  	text-align:left;
+  	width:320px;
+}
+
+#formLabelCompetenza {
+	float:none;
+  	margin:60px auto 75px;
+  	text-align:left;
+  	width:320px;	
+}
+
+#formUpdate {
+	float:none;
+  	margin:40px auto 60px;
+  	text-align:left;
+  	width:320px;
+}
+
+/* TROVA ID PROTOCOLLO */
+#id_protocollo {
+	margin:0 auto;
+	padding:5px;
+	margin-top:60px;
+	margin-bottom: 100px;
+	background-color: white;
+	border-radius:8px;
+	border:1px solid black;
+}
+
+#id_protocollo tr th {
+	font-width:bold;
+	font-family: Trebuchet MS;
+	font-size:17px;
+}
+
+#id_protocollo tr .primavoce {
+	width: 50px;
+	border-right-style:solid;
+  	border-right-width:2px;
+}
+
+#id_protocollo tr .voce {
+  	border-right-style:solid;
+  	border-right-width:2px;
+  	text-align:center;
+  	width:190px;
+}
+
+#id_protocollo tr .ultimavoce {
+  	text-align:center;
+  	width:130px;
+}
+
+#id_protocollo a {
+	text-decoration: none;
+	color:green;
+}
+
+#id_protocollo a:hover {
+	text-decoration: underline;
+}
+
+
+/* LISTA COMPETENZE PERSONA */
+#competenze tr td {
+	border: 1px solid black;
+}
+
+
+/* RICERCA PERSONA */
+#tabellaPersone {
+	margin:0 auto;
+	padding:5px;
+	margin-top:60px;
+	margin-bottom: 100px;
+	background-color: white;
+	border-radius:8px;
+	border:1px solid black;
+}
+
+#tabellaPersone tr th {
+	font-width:bold;
+	font-family: Trebuchet MS;
+	font-size:17px;
+}
+
+#tabellaPersone tr .primavoce {
+	width: 50px;
+	border-right-style:solid;
+  	border-right-width:2px;
+}
+
+#tabellaPersone tr .voce {
+  	border-right-style:solid;
+  	border-right-width:2px;
+  	text-align:center;
+  	padding:5px;
+}
+
+#tabellaPersone tr .vocenota {
+  	border-right-style:solid;
+  	border-right-width:2px;
+  	text-align:center;
+  	padding:5px;
+  	width: 250px;
+}
+
+#tabellaPersone tr .ultimavoce {
+  	text-align:center;
+}
+
+#tabellaPersone a {
+	text-decoration: none;
+	color:green;
+}
+
+#tabellaPersone a:hover {
+	text-decoration: underline;
+}
+
+#livello {
+	height: 20px;
+}
+
+.errorMessage {
+	color: red;
+	font-size: 1.2em;
+}
+
+#closePage {
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	margin-top:20px;
+}
+
+#closePage .close {
+	font-family: Georgia;
+	font-size: 25px;
+	text-decoration: none;
+	color: green;
+}
+
+textarea {
+    resize: none;
+    width:148px; 
+	height:60px;
+	margin: 2px;
+}

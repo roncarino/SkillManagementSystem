@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true"/>
+	<constant name="struts.custom.i18n.resources" value="global"/>
+
+	<package name="default" extends="struts-default">			
+		<action name="index" class="it.synclab.sms.action.Index">
+			<interceptor-ref name="i18n"/>
+     		<interceptor-ref name="basicStack"/>
+			<result name="SUCCESS">/index.jsp</result>
+		</action>
+		
+		<action name="RicercaPersonaLink" class="it.synclab.sms.action.RicercaPersona">
+			<result>/WEB-INF/pages/RicercaPersona.jsp</result>
+			<result name="SUCCESS">WEB-INF/pages/RicercaPersona.jsp</result>
+		</action>
+		
+		<action name="TrovaIdProtocolloLink" class="it.synclab.sms.action.Index">
+			<result>/WEB-INF/pages/TrovaIdProtocollo.jsp</result>
+			<result name="SUCCESS">WEB-INF/pages/TrovaIdProtocollo.jsp</result>
+		</action>
+		
+		<action name="InserisciLabelCompetenzaLink" class="it.synclab.sms.action.Index">
+			<result>/WEB-INF/pages/InserisciLabelCompetenza.jsp</result>
+		</action>
+		
+		<action name="UploadFileLink" class="it.synclab.sms.action.Index">
+			<result>/WEB-INF/pages/UploadFile.jsp</result>
+		</action>
+
+		
+
+		<action name="UpdateDatiPersona" class="it.synclab.sms.action.UpdateDatiPersona">
+<!-- 			<interceptor-ref name="store"> -->
+<!--         		<param name="operationMode">STORE</param> -->
+<!--      		</interceptor-ref> -->
+<!--      		<interceptor-ref name="defaultStack" /> -->
+
+			<result name="input" type="redirect-action">
+				<param name="actionName">UpdateDatiPersona</param>
+      			<param name="id_protocollo">${id_protocollo}</param>
+    		</result>
+    		
+<!--     		<interceptor-ref name="store"> -->
+<!--       			<param name="operationMode">RETRIEVE</param> -->
+<!--    		</interceptor-ref> -->
+				
+			<result name="SUCCESS">WEB-INF/pages/UpdateDatiPersona.jsp</result>
+			<result name="SUCCESSUPDATE">WEB-INF/pages/UpdateDatiPersonaSuccess.jsp</result>
+		</action>	
+
+		<action name="TrovaIdProtocollo" class="it.synclab.sms.action.TrovaIdProtocollo">
+			<result name="SUCCESS">WEB-INF/pages/TrovaIdProtocollo.jsp</result>			
+		</action>
+
+		<action name="ListaCompetenzePersona" class="it.synclab.sms.action.ListaCompetenzePersona">
+			<result name="SUCCESS">WEB-INF/pages/ListaCompetenzePersona.jsp</result>
+		</action>
+
+		<action name="RicercaPersona" class="it.synclab.sms.action.RicercaPersona">
+			<result name="SUCCESS">WEB-INF/pages/RicercaPersona.jsp</result>
+		</action>
+
+		<action name="InsertAutomaticCompetenze" class="it.synclab.sms.action.InsertAutomaticCompetenze">
+			<result name="input">WEB-INF/pages/InsertAutomaticCompetenze.jsp</result>
+			<result name="SUCCESS">WEB-INF/pages/InsertAutomaticCompetenzeSuccess.jsp</result>
+		</action>
+		
+		<action name="UploadFile" class="it.synclab.sms.action.UploadFile">
+			<interceptor-ref name="fileUpload">
+	            <param name="allowedTypes">
+	                application/vnd.ms-excel
+	            </param>
+	        </interceptor-ref>
+	        <interceptor-ref name="defaultStack" />
+		
+			<result name="input">WEB-INF/pages/UploadFile.jsp</result>
+			<result name="SUCCESS">WEB-INF/pages/InsertAutomaticCompetenze.jsp</result>
+		</action>
+		
+		<action name="InserisciLabelCompetenza" class="it.synclab.sms.action.InserisciLabelCompetenza">
+			<result name="input">WEB-INF/pages/InserisciLabelCompetenza.jsp</result>
+			<result name="SUCCESS">WEB-INF/pages/InserisciLabelCompetenzaSuccess.jsp</result>
+		</action>
+	</package>
+</struts>
